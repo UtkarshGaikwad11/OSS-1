@@ -126,10 +126,7 @@ namespace DAL
             {
                 conn.Open();
 
-                /*
-                string query = "UPDATE employe  SET name='" + emp.Name + "',designation='"
-                                    + emp.Designation + "', salary=" + emp.salary + " WHERE id=" + emp.Id;
-                */
+           
                 string query = "update employe SET name=@empname,designation=@empdes,salary=@empsal where id=@empid";
                 MySqlCommand cmd = new MySqlCommand(query, conn as MySqlConnection);
 
